@@ -1,0 +1,34 @@
+<!-- Order Summary -->
+    <div class="cart-summary">
+      <h3 class="summary-title">Order Summary</h3>
+
+      <div class="price-row">
+        <span>Items Price ({{ cartItems.length }} items)</span>
+        <span>৳{{ getItemsTotal() }}</span>
+      </div>
+
+      <div class="price-row">
+        <span>Delivery Fee</span>
+        <span>৳{{ deliveryFee }}</span>
+      </div>
+
+      <div class="subtotal-row">
+        <span>Subtotal</span>
+        <span>৳{{ getItemsTotal() + deliveryFee }}</span>
+      </div>
+
+      <div class="vat-row">
+        <span>VAT (15%)</span>
+        <span>৳{{ getVAT().toFixed(2) }}</span>
+      </div>
+
+      <div class="grand-total">
+        <div class="price-row">
+          <span>Grand Total</span>
+          <span>৳{{ getGrandTotal().toFixed(2) }}</span>
+        </div>
+      </div>
+
+      <!-- <button class="checkout-btn" (click)="proceedToCheckout()">
+        PROCEED TO CHECKOUT
+      </button> -->

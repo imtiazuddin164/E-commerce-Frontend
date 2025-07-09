@@ -1,0 +1,19 @@
+.summary-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  flex: 1;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px #ccc;
+  font-weight: bold;
+  text-align: center;
+}
+
+.chart-container {
+  margin-bottom: 40px;
+}

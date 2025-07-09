@@ -1,0 +1,25 @@
+.eshop-footer {
+  background-color: #000; /* pure black */
+  color: #ccc; /* soft white/grey text for modern feel */
+  padding: 20px 0;
+  font-size: 14px;
+  border-top: 1px solid #222;
+  margin-top: 0px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container .brand {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.footer-container .brand:hover {
+  color: #4caf50; /* or any brand color */
+  transition: color 0.3s ease;
+}

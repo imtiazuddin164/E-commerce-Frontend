@@ -1,0 +1,94 @@
+<div class="coupon-admin">
+  <h2>{{ isEditing ? "Edit" : "Add" }} Coupon</h2>
+
+  <form (ngSubmit)="saveCoupon()" #couponForm="ngForm">
+    <div class="form-row">
+      <div class="form-group">
+        <label>Coupon Code</label>
+        <input
+          type="text"
+          [(ngModel)]="newCoupon.couponCode"
+          name="code"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label>Discount Amount</label>
+        <input
+          type="number"
+          [(ngModel)]="newCoupon.discountAmount"
+          name="discountAmount"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Type</label>
+        <select [(ngModel)]="newCoupon.type" name="type">
+          <option value="FIXED">Fixed</option>
+          <option value="PERCENTAGE">Percentage</option>
+        </select>
+      </div>
+      <div class="form-group checkbox-group">
+        <label>
+          <input type="checkbox" [(ngModel)]="newCoupon.active" name="active" />
+          Active
+        </label>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Start Date</label>
+        <input
+          type="date"
+          [(ngModel)]="newCoupon.startDate"
+          name="startDate"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label>End Date</label>
+        <input
+          type="date"
+          [(ngModel)]="newCoupon.endDate"
+          name="endDate"
+          required
+        />
+      </div>
+    </div>
+
+    <button type="submit">{{ isEditing ? "Update" : "Create" }} Coupon</button>
+  </form>
+  <br />
+  <h3>Coupon List</h3>
+  <table class="coupon-table">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Discount</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Valid From</th>
+        <th>Valid To</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let coupon of coupons">
+        <td>{{ coupon.couponCode }}</td>
+        <td>{{ coupon.discountAmount }}</td>
+        <td>{{ coupon.type }}</td>
+        <td>{{ coupon.active ? "Active" : "Inactive" }}</td>
+        <td>{{ coupon.startDate }}</td>
+        <td>{{ coupon.endDate }}</td>
+        <td>
+          <button (click)="editCoupon(coupon)">Edit</button>
+          <button (click)="deleteCoupon(coupon.id!)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

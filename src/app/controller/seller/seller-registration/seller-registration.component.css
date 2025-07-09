@@ -1,0 +1,180 @@
+/* .seller-register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+.seller-register-form {
+  background-color: #ffffff;
+  padding: 30px 35px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 450px;
+}
+
+.seller-register-form h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: #333;
+}
+
+.seller-register-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+.seller-register-form input,
+.seller-register-form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.25s;
+}
+
+.seller-register-form input:focus,
+.seller-register-form select:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.seller-register-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.seller-register-form button:hover {
+  background-color: #3b78c7;
+} */
+
+
+.daraz-seller-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.seller-icon {
+  font-size: 40px;
+  color: #f57224;
+  margin-bottom: 10px;
+}
+
+.daraz-seller-form h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #f57224;
+  outline: none;
+  box-shadow: 0 0 6px rgba(245, 114, 36, 0.3);
+}
+
+.submit-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.submit-btn button {
+  padding: 14px 32px;
+  background-color: #f57224;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn button:hover {
+  background-color: #d85e1d;
+}
+
+
+.submit-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.submit-btn button {
+  width: 200px;
+  padding: 14px 0;
+  background-color: #f57224;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn button:hover {
+  background-color: #d85e1d;
+  transform: scale(1.03);
+}
+
+@media (max-width: 500px) {
+  .submit-btn button {
+    width: 100%;
+  }
+}

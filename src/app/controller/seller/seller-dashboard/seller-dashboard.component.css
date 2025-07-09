@@ -1,0 +1,51 @@
+.seller-dashboard {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: #38bdf8;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin-bottom: 15px;
+}
+
+.menu li a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.menu li a:hover {
+  background-color: #374151;
+  color: #38bdf8;
+}
+
+.main-content {
+  flex: 1;
+  background-color: #f9fafb;
+  padding: 25px;
+  overflow-y: auto;
+}

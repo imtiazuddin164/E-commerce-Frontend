@@ -1,0 +1,252 @@
+<!-- <div class="card">
+  <h2 class="card-title">Edit Product</h2>
+
+  <form
+    #productForm="ngForm"
+    (ngSubmit)="onSubmit(productForm)"
+    class="form-grid"
+  >
+    <div class="form-group">
+      <label for="productCode">Product Code</label>
+      <input
+        type="text"
+        id="productCode"
+        name="productCode"
+        [(ngModel)]="product.productCode"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="productName">Product Name</label>
+      <input
+        type="text"
+        id="productName"
+        name="productName"
+        [(ngModel)]="product.productName"
+        required
+      />
+    </div>
+
+    <div class="form-group full-width">
+      <label for="description">Description</label>
+      <textarea
+        id="description"
+        name="description"
+        [(ngModel)]="product.description"
+        required
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="categoryId">Category</label>
+      <select
+        id="categoryId"
+        name="categoryId"
+        [(ngModel)]="product.categoryId"
+        required
+        (change)="onCategoryChange()"
+      >
+        <option value="">Select Category</option>
+        <option *ngFor="let cat of categories" [value]="cat.id">
+          {{ cat.categoryName }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="subCategoryId">Subcategory</label>
+      <select
+        id="subCategoryId"
+        name="subCategoryId"
+        [(ngModel)]="product.subcategoryId"
+        required
+      > 
+        <option value="">Select Subcategory</option>
+        <option *ngFor="let sub of filteredSubcategories" [value]="sub.id">
+          {{ sub.subcategoryName }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="sellerId">Seller ID</label>
+      <input
+        type="number"
+        id="sellerId"
+        name="sellerId"
+        [(ngModel)]="product.sellerId"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input
+        type="number"
+        id="price"
+        name="price"
+        [(ngModel)]="product.price"
+        required
+        min="1"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="stock">Stock</label>
+      <input
+        type="number"
+        id="stock"
+        name="stock"
+        [(ngModel)]="product.stock"
+        required
+        min="0"
+      />
+    </div> -->
+
+    <!-- <div class="form-group full-width">
+      <label for="mainImage">Image URL</label>
+      <input
+        type="text"
+        id="mainImage"
+        name="mainImage"
+        [(ngModel)]="product.mainImage"
+        required
+      />
+    </div> -->
+
+    <!-- <div class="form-group full-width">
+  <label for="mainImage">Product Image</label>
+  <input
+    type="file"
+    id="mainImage"
+    name="mainImage"
+    (change)="onImageSelected($event)"
+    accept="image/*"
+  />
+</div>
+
+
+
+    <div class="form-group full-width">
+      <button type="submit" [disabled]="productForm.invalid">
+        Update Product
+      </button>
+    </div>
+  </form>
+</div> -->
+
+
+
+<div class="card">
+  <h2 class="card-title">Edit Product</h2>
+
+  <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)" class="form-grid">
+    <div class="form-group">
+      <label for="productCode">Product Code</label>
+      <input
+        type="text"
+        id="productCode"
+        name="productCode"
+        [(ngModel)]="product.productCode"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="productName">Product Name</label>
+      <input
+        type="text"
+        id="productName"
+        name="productName"
+        [(ngModel)]="product.productName"
+        required
+      />
+    </div>
+
+    <div class="form-group full-width">
+      <label for="description">Description</label>
+      <textarea
+        id="description"
+        name="description"
+        [(ngModel)]="product.description"
+        required
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="categoryId">Category</label>
+      <select
+        id="categoryId"
+        name="categoryId"
+        [(ngModel)]="product.categoryId"
+        required
+        (change)="onCategoryChange()"
+      >
+        <option value="">Select Category</option>
+        <option *ngFor="let cat of categories" [value]="cat.id">
+          {{ cat.categoryName }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="subCategoryId">Subcategory</label>
+      <select
+        id="subCategoryId"
+        name="subCategoryId"
+        [(ngModel)]="product.subcategoryId"
+        required
+      >
+        <option value="">Select Subcategory</option>
+        <option *ngFor="let sub of filteredSubcategories" [value]="sub.id">
+          {{ sub.subcategoryName }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input
+        type="number"
+        id="price"
+        name="price"
+        [(ngModel)]="product.price"
+        required
+        min="1"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="stock">Stock</label>
+      <input
+        type="number"
+        id="stock"
+        name="stock"
+        [(ngModel)]="product.stock"
+        required
+        min="0"
+      />
+    </div>
+
+    <!-- 🖼️ Image Upload with Preview -->
+    <div class="form-field file-upload full-width">
+      <label><i class="fas fa-camera"></i> Upload New Image</label>
+      <div class="file-upload-container">
+        <label for="fileInput" class="file-input-label">
+          <i class="fas fa-cloud-upload-alt"></i> Choose File
+        </label>
+        <input id="fileInput" type="file" (change)="onFileChanged($event)" />
+        <div class="image-preview">
+          <img [src]="imgURL" *ngIf="imgURL" height="120" />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group full-width">
+      <button type="submit" [disabled]="productForm.invalid">
+        Update Product
+      </button>
+    </div>
+  </form>
+</div>

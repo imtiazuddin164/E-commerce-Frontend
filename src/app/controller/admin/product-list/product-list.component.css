@@ -1,0 +1,102 @@
+.product-list-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.top-bar {
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.top-bar button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.top-bar button:hover {
+  background-color: #0056b3;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-table th,
+.product-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.product-table img {
+  width: 50px;
+  height: auto;
+}
+
+.product-table button {
+  padding: 6px 12px;
+  margin: 0 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-table .delete-btn {
+  background-color: #dc3545;
+  color: white;
+  font-weight: 500;
+}
+
+.product-table .delete-btn:hover {
+  background-color: #c82333;
+}
+
+.product-table button:hover {
+  opacity: 0.9;
+}
+
+.edit-btn {
+  padding: 6px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+
+.table-wrapper {
+  max-height: 800px; /* You can change height */
+  overflow-y: auto;
+  overflow-x: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+
+.product-table td, .product-table th {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

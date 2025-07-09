@@ -1,0 +1,91 @@
+<!-- <div class="container">
+  <h2>📆 Yearly Sales Report</h2>
+
+  <div class="summary-card yellow">
+    <h5>Total Yearly Sales</h5>
+    <p>{{ yearlySales | currency : "BDT" }}</p>
+  </div>
+
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search by product name or date"
+      [(ngModel)]="search"
+      (input)="filterSales()"
+      class="form-control"
+    />
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>Medicine</th>
+          <th>Quantity</th>
+          <th>Price (৳)</th>
+          <th>Total (৳)</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of filteredList">
+          <td>{{ item.name }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.total }}</td>
+          <td>{{ item.date }}</td>
+          <td>{{ item.time }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
+
+<div class="sales-summary-container">
+  <h2 class="section-title">📆 Yearly Sales Report</h2>
+
+  <!-- 🔸 Top section: Total + Search -->
+  <div class="summary-controls">
+    <div class="total-sales">
+      <span>Total Yearly Sales:</span>
+      <strong>{{ yearlySales | currency : "BDT" }}</strong>
+    </div>
+
+    <div class="search-bar">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by product name or date"
+        [(ngModel)]="search"
+        (input)="filterSales()"
+      />
+    </div>
+  </div>
+
+  <!-- 📋 Table -->
+  <div class="table-responsive mt-3">
+    <table class="table table-bordered table-hover">
+      <thead class="table-dark text-center">
+        <tr>
+          <th>Medicine</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr *ngFor="let item of filteredList">
+          <td>{{ item.name }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.total }}</td>
+          <td>{{ item.date }}</td>
+          <td>{{ item.time }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

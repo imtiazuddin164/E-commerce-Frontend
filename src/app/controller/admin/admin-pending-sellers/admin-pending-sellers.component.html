@@ -1,0 +1,30 @@
+<div class="pending-sellers-container">
+  <h2>Pending Seller Approvals</h2>
+
+  <table class="pending-sellers-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Shop Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let seller of pendingSellers; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ seller.fullName }}</td>
+        <td>{{ seller.email }}</td>
+        <td>{{ seller.phone }}</td>
+        <td>{{ seller.shopName }}</td>
+        <td>
+          <button (click)="approveSeller(seller.id)">Approve</button>
+          <button class="reject" (click)="rejectSeller(seller.id)">Reject</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

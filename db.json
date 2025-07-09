@@ -1,0 +1,485 @@
+{
+  "user": [
+    {
+      "id": "831c",
+      "name": "IMTIAZ UDDIN",
+      "username": "imtiazuddin164",
+      "email": "imtiazuddin164@gmail.com",
+      "tel": "01778118604",
+      "password": "12345",
+      "confirmpassword": "12345"
+    },
+    {
+      "id": "250c",
+      "name": "Iftekhar Uddin",
+      "username": "iftakhar11",
+      "email": "ifkharuddin123@gmail.com",
+      "tel": "01780258645",
+      "password": "12345",
+      "confirmpassword": "12345"
+    },
+    {
+      "id": "e306",
+      "name": "Imtiaz Uddin",
+      "username": "imtiazuddin164",
+      "email": "imtiazuddin164@gmail.com",
+      "tel": "01778702800",
+      "password": "12345",
+      "confirmpassword": "12345"
+    },
+    {
+      "id": "597d"
+    },
+    {
+      "id": "6556",
+      "email": "tajul123",
+      "password": "12345"
+    },
+    {
+      "id": "7b78"
+    },
+    {
+      "id": "34af"
+    },
+    {
+      "id": "dcd9",
+      "name": "IMTIAZ UDDIN",
+      "email": "imtiazuddin164@gmail.com",
+      "phone": 1778118604,
+      "userName": "imtiazuddin164",
+      "password": "123456",
+      "confirmPassword": "123456"
+    },
+    {
+      "id": "c38d",
+      "email": "imtiazuddin164",
+      "password": "123456"
+    },
+    {
+      "id": "933b",
+      "name": "Iftakhar",
+      "email": "iftakhar123@gmail.com",
+      "phone": "01589745623",
+      "username": "iftakhar123",
+      "password": "12345",
+      "confirmpassword": "12345"
+    },
+    {
+      "id": "a6da",
+      "name": "Aman",
+      "email": "aman123@gmail.com",
+      "phone": "01587945235",
+      "username": "aman123",
+      "password": "12345",
+      "confirmpassword": "12345"
+    }
+  ],
+  "products": [
+    {
+      "id": "1cfe",
+      "productCode": 1011,
+      "productName": "Apple iPhone 16 pro",
+      "description": "Apple iPhone 16 Pro",
+      "categoryId": "3913",
+      "categoryName": "",
+      "subcategoryName": "",
+      "subcategoryId": "65ca",
+      "sellerId": 546,
+      "price": 2000,
+      "stock": 15,
+      "mainImage": "image"
+    },
+    {
+      "id": "6d67",
+      "productCode": 9,
+      "productName": "Samsung Galaxy A73",
+      "description": "Samsung Galaxy A73",
+      "categoryId": "3913",
+      "categoryName": "",
+      "subcategoryName": "",
+      "subcategoryId": "65ca",
+      "sellerId": 3,
+      "price": 3,
+      "stock": 4,
+      "mainImage": "image"
+    },
+    {
+      "productCode": 44,
+      "productName": "Applehone 16 pro iP",
+      "description": "Applehone 16 pro iP",
+      "categoryId": "3913",
+      "subCategoryId": "9f4d",
+      "sellerId": 4,
+      "price": 999,
+      "stock": 6,
+      "mainImage": "image",
+      "id": "ed22",
+      "subcategoryId": "65ca"
+    },
+    {
+      "id": "3c88",
+      "productCode": 102,
+      "productName": "Samsung Galaxy A73",
+      "description": "Samsung Galaxy A73, 8/256",
+      "categoryId": "3913",
+      "categoryName": "",
+      "subcategoryName": "",
+      "subcategoryId": "65ca",
+      "sellerId": 11,
+      "price": 77500,
+      "stock": 12,
+      "mainImage": "image"
+    },
+    {
+      "id": "715a",
+      "productCode": 141,
+      "productName": "Xiaomi Redmi Note 7",
+      "description": "Xiaomi Redmi Note 7",
+      "categoryId": "3913",
+      "categoryName": "",
+      "subcategoryName": "",
+      "subcategoryId": "65ca",
+      "sellerId": 11,
+      "price": 15000,
+      "stock": 15,
+      "mainImage": "image"
+    },
+    {
+      "id": "60a3",
+      "productCode": 123,
+      "productName": "Xiaomi Redmi Turbo 4 Pro",
+      "description": "Available. Released 2025, April 24",
+      "categoryId": "3913",
+      "categoryName": "",
+      "subcategoryName": "",
+      "subcategoryId": "65ca",
+      "sellerId": 10,
+      "price": 50000,
+      "stock": 12,
+      "mainImage": "image"
+    },
+    {
+      "id": "9e99",
+      "productCode": 2031,
+      "productName": "Xiaomi Redmi K80",
+      "description": "Available. Released 2024, November 27",
+      "categoryId": "3913",
+      "categoryName": "",
+      "subcategoryName": "",
+      "subcategoryId": "65ca",
+      "sellerId": 11,
+      "price": 42500,
+      "stock": 10,
+      "mainImage": "image"
+    },
+    {
+      "id": "41f2",
+      "productCode": 4,
+      "productName": "Apple iPhone 16 pro",
+      "description": "fgfgfgrgdfgdfgdfg",
+      "categoryId": "3913",
+      "categoryName": "",
+      "subcategoryName": "",
+      "subcategoryId": "65ca",
+      "sellerId": 55,
+      "price": 55,
+      "stock": 55,
+      "mainImage": "image"
+    },
+    {
+      "id": "6cda",
+      "productCode": 54235,
+      "productName": "Samsung",
+      "description": "fgfgdfgdf",
+      "categoryId": "3913",
+      "categoryName": "",
+      "subcategoryName": "",
+      "subcategoryId": "65ca",
+      "sellerId": 444,
+      "price": 5555,
+      "stock": 66,
+      "mainImage": "image"
+    },
+    {
+      "id": "cd68",
+      "productCode": 67567,
+      "productName": "Samsung",
+      "description": "67567567gdfgdfgdf",
+      "categoryId": "3913",
+      "categoryName": "",
+      "subcategoryName": "",
+      "subcategoryId": "65ca",
+      "sellerId": 6757657,
+      "price": 565656,
+      "stock": 214,
+      "mainImage": "image"
+    },
+    {
+      "id": "1737",
+      "productCode": 565,
+      "productName": "Samsung",
+      "description": "fgdfgdfg",
+      "categoryId": "3913",
+      "categoryName": "",
+      "subcategoryName": "",
+      "subcategoryId": "65ca",
+      "sellerId": 444,
+      "price": 4444,
+      "stock": 5,
+      "mainImage": "image"
+    },
+    {
+      "id": "5039",
+      "productCode": 45464,
+      "productName": "Xiaomi Redmi Note 7",
+      "description": "5454",
+      "categoryId": "3913",
+      "categoryName": "",
+      "subcategoryName": "",
+      "subcategoryId": "65ca",
+      "sellerId": 66,
+      "price": 6666,
+      "stock": 6,
+      "mainImage": "image"
+    }
+  ],
+  "categories": [
+    {
+      "id": "3913",
+      "categoryName": "Electronics"
+    },
+    {
+      "id": "8bde",
+      "categoryName": "Fashion"
+    },
+    {
+      "id": "69d7",
+      "categoryName": "Home & Kitchen"
+    },
+    {
+      "id": "929f",
+      "categoryName": "Beauty & Health "
+    },
+    {
+      "id": "c735",
+      "categoryName": "Sports & Outdoors"
+    }
+  ],
+  "subcategories": [
+    {
+      "id": "65ca",
+      "subcategoryName": "Smartphones",
+      "categoryId": "3913",
+      "categoryName": "Electronics"
+    },
+    {
+      "id": "c009",
+      "subcategoryName": "Television",
+      "categoryId": "3913",
+      "categoryName": "Electronics"
+    },
+    {
+      "id": "7cab",
+      "subcategoryName": "Smart Watches",
+      "categoryId": "3913",
+      "categoryName": "Electronics"
+    },
+    {
+      "id": "0ddf",
+      "subcategoryName": "Monitor",
+      "categoryId": "3913",
+      "categoryName": "Electronics"
+    },
+    {
+      "id": "3f88",
+      "subcategoryName": "Earphones / Headphones ",
+      "categoryId": "3913",
+      "categoryName": "Electronics"
+    },
+    {
+      "id": "b8e4",
+      "subcategoryName": "Shirt",
+      "categoryId": "8bde",
+      "categoryName": "Fashion"
+    },
+    {
+      "id": "3f5a",
+      "subcategoryName": "T-Shirt",
+      "categoryId": "8bde",
+      "categoryName": "Fashion"
+    },
+    {
+      "id": "1985",
+      "subcategoryName": "Jeans",
+      "categoryId": "8bde",
+      "categoryName": "Fashion"
+    },
+    {
+      "id": "d51c",
+      "subcategoryName": "Furniture ",
+      "categoryId": "69d7",
+      "categoryName": "Home & Kitchen"
+    },
+    {
+      "id": "1b2b",
+      "subcategoryName": "Bed",
+      "categoryId": "69d7",
+      "categoryName": "Home & Kitchen"
+    },
+    {
+      "id": "cbe1",
+      "subcategoryName": "Dumbbells",
+      "categoryId": "c735",
+      "categoryName": "Sports & Outdoors"
+    }
+  ],
+  "doctor": [
+    {
+      "id": "7f14",
+      "name": "Monjur Morshed",
+      "department": "Neurology",
+      "degree": "MBA",
+      "designation": "Assistant ",
+      "details": "dfadsfsdfsd",
+      "contact": "01856045802"
+    },
+    {
+      "id": "470a",
+      "name": "Samsung Galaxy A73",
+      "department": "Orthopedics",
+      "degree": "MBA, FCPS",
+      "designation": "Professor ",
+      "details": "dfdsfsdfd",
+      "contact": "01856045802"
+    },
+    {
+      "id": "aa03",
+      "name": "Samsung Galaxy A73",
+      "department": "Neurology",
+      "degree": "MBA",
+      "designation": "Professor ",
+      "details": "rgdfgdf",
+      "contact": "01856045802"
+    },
+    {
+      "id": "85a4",
+      "name": "IMTIAZ UDDIN",
+      "department": "Electronics",
+      "degree": "dfdfdf",
+      "designation": "dfdfdf",
+      "details": "dfdsfsdf",
+      "contact": "012584794555"
+    }
+  ],
+  "cartItems": [
+    {
+      "id": "1",
+      "code": 1001,
+      "userId": 1,
+      "ProductId": 2001,
+      "quantity": 2,
+      "price": 400,
+      "totalPrice": 800
+    },
+    {
+      "id": "2",
+      "code": 1002,
+      "userId": 1,
+      "ProductId": 2002,
+      "quantity": 2,
+      "price": 720,
+      "totalPrice": 1440
+    },
+    {
+      "id": "3",
+      "code": 1003,
+      "userId": 1,
+      "ProductId": 2003,
+      "quantity": 2,
+      "price": 930,
+      "totalPrice": 1860
+    },
+    {
+      "id": "4",
+      "code": 1004,
+      "userId": 1,
+      "ProductId": 2004,
+      "quantity": 1,
+      "price": 380,
+      "totalPrice": 380
+    },
+    {
+      "id": "5",
+      "code": 1005,
+      "userId": 1,
+      "ProductId": 2005,
+      "quantity": 2,
+      "price": 1520,
+      "totalPrice": 3040
+    }
+  ],
+  "orders": [
+    {
+      "id": "597f",
+      "orderCode": "X3EU8S",
+      "date": "2025-06-22T07:25:13.368Z",
+      "customerName": "IMTIAZ UDDIN",
+      "phone": "01778118604",
+      "paymentMethod": "mobile",
+      "mobileType": "bKash",
+      "address": "West Nakhalpara, 6 no goli, 614 no house, Near Kuwaiti Mosque, Tejgaon.",
+      "items": [
+        {
+          "name": " Sony Bravia KD-55X75K",
+          "quantity": 1,
+          "price": 76000
+        }
+      ],
+      "subtotal": 76000,
+      "vat": 11400,
+      "deliveryFee": 60,
+      "total": 87460
+    },
+    {
+      "id": "b09d",
+      "orderCode": "5J7R64",
+      "date": "2025-06-22T09:31:53.824Z",
+      "customerName": "Imtiaz Uddin",
+      "phone": "01778118604",
+      "paymentMethod": "mobile",
+      "mobileType": "bKash",
+      "address": "lkdsfjlsdjflsadjflkdsjflkjd",
+      "items": [
+        {
+          "name": "Samsung 43DU7700",
+          "quantity": 2,
+          "price": 39800
+        }
+      ],
+      "subtotal": 79600,
+      "vat": 11940,
+      "deliveryFee": 60,
+      "total": 91600
+    }
+  ],
+  "coupons": [
+    {
+      "id": "057e",
+      "couponCode": "cpn15",
+      "discountAmount": 6,
+      "type": "PERCENTAGE",
+      "active": true,
+      "startDate": "2025-06-23",
+      "endDate": "2025-06-30"
+    },
+    {
+      "id": "c059",
+      "couponCode": "cpn15",
+      "discountAmount": 9,
+      "type": "PERCENTAGE",
+      "active": true,
+      "startDate": "2025-06-23",
+      "endDate": "2025-06-23"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+<!-- <app-header></app-header> -->
+
+<div class="admin-dashboard-container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo" routerLink="/home">🛡️Admin Panel</div>
+    <ul class="menu">
+      <li><a routerLink="/admin/admin-dashboard">🏠 Dashboard</a></li>
+
+      <!-- Category Dropdown -->
+      <li class="menu-item" (click)="toggleCategoryMenu()">
+        <span>
+          📂 Category Management
+          <span class="arrow" [class.rotate]="showCategoryMenu">▸</span>
+        </span>
+        <ul *ngIf="showCategoryMenu" class="submenu">
+          <li><a routerLink="/admin/category">📁 Category</a></li>
+          <li><a routerLink="/admin/subcategory">📑 Subcategory</a></li>
+        </ul>
+      </li>
+
+      <!-- Product -->
+      <li class="menu-item" (click)="toggleProductMenu()">
+        <span>
+          🛒 Product Management
+          <span class="arrow" [class.rotate]="showProductMenu">▸</span>
+        </span>
+        <ul *ngIf="showProductMenu" class="submenu">
+          <li><a routerLink="/admin/add-product">➕ Add Product</a></li>
+          <li><a routerLink="/admin/product-list">📦 Product List</a></li>
+        </ul>
+      </li>
+
+      <!-- Sales Reports Dropdown -->
+      <li class="menu-item" (click)="toggleSalesMenu()">
+        <span>
+          📊 Sales Reports
+          <span class="arrow" [class.rotate]="showSalesMenu">▸</span>
+        </span>
+        <ul *ngIf="showSalesMenu" class="submenu">
+          <li><a routerLink="/admin/daily-sales">📅 Daily Sales</a></li>
+          <li>
+            <a routerLink="/admin/monthly-sales">🗓️ Monthly Sales</a>
+          </li>
+          <li>
+            <a routerLink="/admin/yearly-sales">📈 Yearly Sales</a>
+          </li>
+          <li>
+            <a routerLink="/admin/top-products">⭐ Top Products</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Seller -->
+      <li class="menu-item" (click)="toggleSellerMenu()">
+        <span>
+          🛍️ Seller Management
+          <span class="arrow" [class.rotate]="showSellerMenu">▸</span>
+        </span>
+        <ul *ngIf="showSellerMenu" class="submenu">
+          <li><a routerLink="/admin/pending-sellers">⏳ Pending Sellers</a></li>
+          <li>
+            <a routerLink="/admin/sellers/approved">✅ Approved Sellers</a>
+          </li>
+          <li><a routerLink="/admin/sellers/blocked">🚫 Blocked Sellers</a></li>
+          <li><a routerLink="/admin/sellers/details">📄 Seller Details</a></li>
+        </ul>
+      </li>
+
+      <!-- Other Pages -->
+      <li><a routerLink="/admin/order-management">🧾 Order Management</a></li>
+      <li><a routerLink="/admin/users">👥 User Management</a></li>
+      <li><a routerLink="/admin/inventory">🏷️ Inventory</a></li>
+      <!-- <li><a routerLink="/admin/payment">💳 Payment</a></li> -->
+      <li><a routerLink="/admin/coupon">🎁 Coupon</a></li>
+      <li><a routerLink="/admin/settings">⚙️ Settings</a></li>
+      <!-- <li><a routerLink="/admin/roles">🔐 Role Management</a></li> -->
+    </ul>
+  </aside>
+
+  <!-- Main -->
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

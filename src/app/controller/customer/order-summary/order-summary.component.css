@@ -1,0 +1,134 @@
+/* Order Summary */
+/* .cart-summary {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.summary-title {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.price-row,
+.subtotal-row,
+.vat-row,
+.grand-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.grand-total {
+  font-weight: bold;
+  font-size: 18px;
+  color: #2e7d32;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.checkout-btn {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #388e3c;
+}
+
+.secure-checkout {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  .cart-content {
+    flex-direction: column;
+  }
+
+  .product-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .checkout-btn {
+    font-size: 14px;
+  }
+} */
+
+
+.cart-summary {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 25px 30px;
+  font-family: 'Segoe UI', sans-serif;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.summary-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #222;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.price-row,
+.subtotal-row,
+.vat-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #444;
+}
+
+.subtotal-row span,
+.vat-row span {
+  font-weight: 500;
+}
+
+.grand-total {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.grand-total .price-row {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f57224;
+  justify-content: space-between;
+}
+
+.cart-summary span {
+  display: inline-block;
+}
+
+
+.cart-summary {
+  position: sticky;
+  top: 30px;
+}

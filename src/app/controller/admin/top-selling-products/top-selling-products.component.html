@@ -1,0 +1,24 @@
+<div class="top-selling-container">
+  <h2>🏆 Top Selling Products</h2>
+
+  <table class="table table-bordered table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>#</th>
+        <th>Product Name</th>
+        <th>Quantity Sold</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of topSelling; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.quantitySold }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="topSelling.length === 0" class="text-center text-muted mt-3">
+    No sales data available.
+  </div>
+</div>

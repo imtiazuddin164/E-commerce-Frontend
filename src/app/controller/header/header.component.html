@@ -1,0 +1,124 @@
+
+
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <a class="navbar-brand fw-bold" routerLink="home"><h3>eShop</h3></a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+    <!-- Search box -->
+    <form
+      class="d-flex mx-auto"
+      role="search"
+      style="max-width: 600px; width: 100%"
+    >
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search for products..."
+      />
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+
+    <!-- Right Side Menu -->
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/seller-registration"
+          >Become a Seller</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="registration">Registration</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" routerLink="/cart-page">Cart</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link position-relative" routerLink="/cart-page">
+          <i class="fas fa-shopping-cart fa-lg"></i>
+
+          <!-- 🔴 Badge -->
+          <span
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            *ngIf="cartCount > 0"
+          >
+            {{ cartCount }}
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- New section bellow navbar-2 -->
+
+<div class="secondary-nav d-flex justify-content-start gap-4 py-1"  id="secondaryNav">
+  <div class="dropdown" *ngIf="categories.length > 0">
+    <a
+      class="nav-link dropdown-toggle"
+      href="#"
+      role="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Product Category
+    </a>
+    <ul class="dropdown-menu">
+      <li
+        class="dropdown-submenu"
+        *ngFor="let category of categories"
+        (mouseenter)="hoverCategoryId = category.id"
+        (mouseleave)="hoverCategoryId = undefined"
+        [ngClass]="{ 'position-relative': true }"
+      >
+        <a class="dropdown-item dropdown-toggle" href="#">
+          {{ category.categoryName }}
+        </a>
+        <ul
+          class="dropdown-menu"
+          *ngIf="hoverCategoryId === category.id"
+          (mouseenter)="hoverCategoryId = category.id"
+          (mouseleave)="hoverCategoryId = undefined"
+          [ngClass]="{ show: category.showSub }"
+          style="top: 0; left: 100%"
+        >
+          <!-- <li
+            *ngFor="let sub of getSubcategoriesByCategory(category.id)"
+            (click)="goToSubcategory(sub.id)"
+          >
+            <a class="dropdown-item" routerLink="electronics">{{ sub.subcategoryName }}</a>
+          </li> -->
+
+          <li
+            *ngFor="let sub of getSubcategoriesByCategory(category.id)"
+            (click)="goToSubcategory(sub.id)"
+          >
+            <a class="dropdown-item" href="product-card">{{
+              sub.subcategoryName
+            }}</a>
+          </li>
+        </ul>
+      </li>
+      <li><hr class="dropdown-divider" /></li>
+      <li><a class="dropdown-item" href="#">All Categories</a></li>
+    </ul>
+  </div>
+
+  <a href="offers" class="nav-link">Offers</a>
+  <a href="customer-service" class="nav-link">Customer Service</a>
+</div>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>

@@ -1,0 +1,175 @@
+
+<div class="payment-container">
+  <!-- <h2>Select Payment Method</h2> -->
+
+  <h2><i class="fas fa-wallet"></i> Select Payment Method</h2>
+
+  
+  <form #form="ngForm" (ngSubmit)="submitPayment()">
+
+    <!-- Payment Method Selection -->
+    <!-- <div class="payment-methods">
+      <label class="method-option" [class.active]="selectedMethod === 'mobile'">
+        <input type="radio" name="method" [(ngModel)]="selectedMethod" value="mobile" />
+        <img src="assets/images/mobile-banking.png" alt="" width="40" />
+        Mobile Banking
+      </label>
+
+      <label class="method-option" [class.active]="selectedMethod === 'card'">
+        <input type="radio" name="method" [(ngModel)]="selectedMethod" value="card" />
+        <img src="assets/images/card-icon.png" alt="" width="40" />
+        Card
+      </label>
+
+      <label class="method-option" [class.active]="selectedMethod === 'cod'">
+        <input type="radio" name="method" [(ngModel)]="selectedMethod" value="cod" />
+        <img src="assets/images/cash-delivery.png" alt="" width="40" />
+        Cash On Delivery
+      </label>
+    </div> -->
+
+    <div class="payment-methods">
+  <!-- Mobile Banking -->
+  <label class="method-option" [class.active]="selectedMethod === 'mobile'">
+    <input type="radio" name="method" [(ngModel)]="selectedMethod" value="mobile" />
+    <i class="fas fa-mobile-alt"></i>
+    Mobile Banking
+  </label>
+
+  <!-- Card -->
+  <label class="method-option" [class.active]="selectedMethod === 'card'">
+    <input type="radio" name="method" [(ngModel)]="selectedMethod" value="card" />
+    <i class="fas fa-credit-card"></i>
+    Card
+  </label>
+
+  <!-- Cash On Delivery -->
+  <label class="method-option" [class.active]="selectedMethod === 'cod'">
+    <input type="radio" name="method" [(ngModel)]="selectedMethod" value="cod" />
+    <i class="fas fa-money-bill-wave"></i>
+    Cash On Delivery
+  </label>
+</div>
+
+
+    <!-- Mobile Banking Details -->
+    <!-- <div *ngIf="selectedMethod === 'mobile'" class="form-section">
+      <h3>Select Mobile Wallet</h3>
+      <div class="wallet-options">
+        <label class="wallet-option" [class.active]="paymentData.mobileType === 'bKash'">
+          <input type="radio" name="mobileType" [(ngModel)]="paymentData.mobileType" value="bKash" />
+          <img src="assets/Image/bkash.png" width="50" /> bKash
+        </label>
+        <label class="wallet-option" [class.active]="paymentData.mobileType === 'Nagad'">
+          <input type="radio" name="mobileType" [(ngModel)]="paymentData.mobileType" value="Nagad" />
+          <img src="assets/Image/nagad.png" width="50" /> Nagad
+        </label>
+        <label class="wallet-option" [class.active]="paymentData.mobileType === 'Rocket'">
+          <input type="radio" name="mobileType" [(ngModel)]="paymentData.mobileType" value="Rocket" />
+          <img src="assets/Image/rocket.png" width="50" /> Rocket
+        </label>
+      </div>
+
+      <div *ngIf="paymentData.mobileType" class="wallet-form">
+        <label>Mobile Number:</label>
+        <input type="text" name="mobileNumber" [(ngModel)]="paymentData.mobileNumber"/>
+
+        <label>Transaction ID:</label>
+        <input type="text" name="transactionId" [(ngModel)]="paymentData.transactionId"/>
+      </div>
+    </div> -->
+
+
+    <div *ngIf="selectedMethod === 'mobile'" class="form-section">
+  <h3><i class="fas fa-mobile-alt"></i> Select Mobile Wallet</h3>
+
+  <div class="wallet-options">
+    <!-- bKash -->
+    <label class="wallet-option" [class.active]="paymentData.mobileType === 'bKash'">
+      <input
+        type="radio"
+        name="mobileType"
+        [(ngModel)]="paymentData.mobileType"
+        value="bKash"
+        hidden
+      />
+      <div class="wallet-content">
+        <img src="assets/image/bkash.png" width="40" />
+        <span>bKash</span>
+      </div>
+    </label>
+
+    <!-- Nagad -->
+    <label class="wallet-option" [class.active]="paymentData.mobileType === 'Nagad'">
+      <input
+        type="radio"
+        name="mobileType"
+        [(ngModel)]="paymentData.mobileType"
+        value="Nagad"
+        hidden
+      />
+      <div class="wallet-content">
+        <img src="assets/image/nagad.png" width="40" />
+        <span>Nagad</span>
+      </div>
+    </label>
+
+    <!-- Rocket -->
+    <label class="wallet-option" [class.active]="paymentData.mobileType === 'Rocket'">
+      <input
+        type="radio"
+        name="mobileType"
+        [(ngModel)]="paymentData.mobileType"
+        value="Rocket"
+        hidden
+      />
+      <div class="wallet-content">
+        <img src="assets/image/rocket.png" width="40" />
+        <span>Rocket</span>
+      </div>
+    </label>
+  </div>
+
+  <div *ngIf="paymentData.mobileType" class="wallet-form">
+    <label>📱 Mobile Number:</label>
+    <input type="text" name="mobileNumber" [(ngModel)]="paymentData.mobileNumber" />
+
+    <label>🧾 Transaction ID:</label>
+    <input type="text" name="transactionId" [(ngModel)]="paymentData.transactionId" />
+  </div>
+</div>
+
+
+    <!-- Card Details -->
+    <div *ngIf="selectedMethod === 'card'" class="form-section">
+      <label>Full Name on Card:</label>
+      <input type="text" name="fullName" [(ngModel)]="paymentData.fullName"/>
+
+      <label>Card Number:</label>
+      <input type="text" name="cardNumber" [(ngModel)]="paymentData.cardNumber" maxlength="16"/>
+
+      <label>Expiry Date:</label>
+      <input type="month" name="expiryDate" [(ngModel)]="paymentData.expiryDate"/>
+
+      <label>CVV:</label>
+      <input type="text" name="cvv" [(ngModel)]="paymentData.cvv" maxlength="3"/>
+    </div>
+
+    <!-- COD - No Input Needed -->
+    <div *ngIf="selectedMethod === 'cod'" class="form-section">
+      <p>You will pay in cash upon delivery.</p>
+    </div>
+
+    <button type="submit" class="pay-button">Confirm Order</button>
+  </form>
+  <!-- <div class="checkout-summary">
+    <app-order-summary></app-order-summary>
+  </div> -->
+</div>
+
+
+<!-- Font Awesome for icons -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>

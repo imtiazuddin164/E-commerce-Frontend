@@ -1,0 +1,96 @@
+<!-- <div class="product-details" *ngIf="product">
+  <div class="product-image">
+    <img
+      [src]="'http://localhost:8080/image/' + product.mainImage"
+      alt="{{ product.productName }}"
+    />
+  </div>
+  <div class="product-info">
+    <h2>{{ product.productName }}</h2>
+    <p class="price"><strong>Price:</strong> ৳{{ product.price }}</p>
+    <p><strong>Description:</strong> {{ product.description }}</p>
+    <p>
+      <strong>Availability:</strong>
+      <span [ngStyle]="{ color: product.stock > 0 ? 'green' : 'red' }">
+        {{ product.stock > 0 ? "In Stock" : "Out of Stock" }}
+      </span>
+    </p> -->
+
+<!-- <button class="buy-now" (click)="buyNow()">🚀 Buy Now</button>
+    <button class="add-to-cart" (click)="addToCart()">🛒 Add to Cart</button> -->
+
+<!-- <button (click)="addToCart()" [disabled]="product.stock <= 0">
+      🛒 Add to Cart
+    </button>
+    <button (click)="buyNow()" [disabled]="product.stock <= 0">
+      🚀 Buy Now
+    </button>
+  </div>
+</div> -->
+
+<div class="product-details-container">
+  <div class="product-main">
+    <!-- Main Image -->
+    <div class="product-image">
+      <img
+        [src]="'http://localhost:8080/image/' + product.mainImage"
+        alt="{{ product.productName }}"
+        (click)="openImageModal()"
+      />
+    </div>
+
+    <!-- Modal -->
+    <div class="image-modal" *ngIf="showImageModal" (click)="closeImageModal()">
+      <img
+        [src]="'http://localhost:8080/image/' + product.mainImage"
+        alt="Zoomed Image"
+      />
+    </div>
+
+    <div class="product-info">
+      <h2>{{ product.productName }}</h2>
+      <p class="product-price">
+        Price: ৳{{ product.price | number : "1.2-2" }}
+      </p>
+      <p class="product-code">Product Code: {{ product.productCode }}</p>
+      <p
+        class="product-stock"
+        [ngClass]="{
+          'in-stock': product.stock > 0,
+          'out-of-stock': product.stock === 0
+        }"
+      >
+        {{ product.stock > 0 ? "✅ In Stock" : "❌ Out of Stock" }}
+      </p>
+      <p class="product-seller">
+        Sold by: {{ product.sellerName || "Unknown" }}
+      </p>
+      <div class="product-rating">
+        <p>
+          ⭐ {{ product.avgRating || 0 }} / 5 ({{ product.reviewCount || 0 }}
+          reviews)
+        </p>
+      </div>
+      <div class="button-group">
+        <button
+          class="buy-now"
+          (click)="buyNow()"
+          [disabled]="product.stock <= 0"
+        >
+          🚀 Buy Now
+        </button>
+        <button
+          class="add-to-cart"
+          (click)="addToCart()"
+          [disabled]="product.stock <= 0"
+        >
+          🛒 Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="product-description">
+    <h3>📃 Description</h3>
+    <p>{{ product.description }}</p>
+  </div>
+</div>

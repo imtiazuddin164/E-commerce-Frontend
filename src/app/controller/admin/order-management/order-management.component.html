@@ -1,0 +1,185 @@
+<!-- 
+<div class="admin-order-list">
+  <h2>All Orders</h2>
+    <table class="order-table" *ngIf="orders.length > 0; else noOrders">
+
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Items</th>
+        <th>Total</th>
+        <th>Order Code</th>
+        <th>Date & Time</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.customerName }}</td>
+        <td>{{ order.phone }}</td>
+        <td>{{ order.address }}</td>
+        <td>{{ order.items }}</td>
+        <td>৳{{ order.total }}</td>
+        <td>{{ order.orderCode }}</td>
+        <td>{{ order.date | date:'short' }}</td>
+        <td><button (click)="deleteOrder(order.id!)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #noOrders>
+    <p>No orders found.</p>
+  </ng-template>
+</div> -->
+
+<!-- <div class="admin-order-list">
+  <h2>📦 All Orders</h2>
+  <table class="order-table" *ngIf="orders.length > 0; else noOrders">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Items</th>
+        <th>Total</th>
+        <th>Order Code</th>
+        <th>Date & Time</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.customerName }}</td>
+        <td>{{ order.phone }}</td>
+        <td>{{ order.address }}</td> -->
+<!-- <td>{{ order.items }}</td> -->
+<!-- <td>{{ getTotalItems(order) }} items</td>
+        <td>৳{{ order.total }}</td>
+        <td>{{ order.orderCode }}</td>
+        <td>{{ order.date | date : "short" }}</td>
+        <td>
+          <button class="delete-btn" (click)="deleteOrder(order.id!)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #noOrders>
+    <p class="no-orders-text">🛒 No orders found.</p>
+  </ng-template>
+</div> -->
+
+<!-- <div class="admin-order-list">
+  <h2>📦 All Orders</h2>
+  <table class="order-table" *ngIf="orders.length > 0; else noOrders">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Items</th>
+        <th>Total</th>
+        <th>Order Code</th>
+        <th>Status</th>
+        <th>Date & Time</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.customerName }}</td>
+        <td>{{ order.phone }}</td>
+        <td>{{ order.address }}</td>
+        <td>{{ getTotalItems(order) }} items</td>
+        <td>৳{{ order.total }}</td>
+        <td>{{ order.orderCode }}</td>
+        <td>{{ order.status }}</td>
+        <td>{{ order.date | date : "short" }}</td>
+        <td>
+          <button
+            class="approve-btn"
+            (click)="approveOrder(order.id!)"
+            [disabled]="order.approved"
+          >
+            Approve
+          </button>
+          <button class="delete-btn" (click)="deleteOrder(order.id!)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #noOrders>
+    <p class="no-orders-text">🛒 No orders found.</p>
+  </ng-template>
+</div> -->
+
+
+
+<div class="admin-order-list">
+  <h2>📦 All Orders</h2>
+
+  <table class="order-table" *ngIf="orders.length > 0; else noOrders">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Items</th>
+        <th>Total</th>
+        <th>Order Code</th>
+        <th>Status</th>
+        <th>Date & Time</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.customerName }}</td>
+        <td>{{ order.phone }}</td>
+        <td>{{ order.address }}</td>
+        <td>{{ getTotalItems(order) }} items</td>
+        <td>৳{{ order.total }}</td>
+        <td>{{ order.orderCode }}</td>
+
+        <!-- Status visual tag -->
+        <td>
+          <span
+            [ngClass]="{
+              'status-approved': order.status === 'APPROVED',
+              'status-pending': order.status === 'PENDING'
+            }"
+          >
+            {{ order.status }}
+          </span>
+        </td>
+
+        <td>{{ order.date | date: 'short' }}</td>
+
+        <td>
+          <button
+            class="approve-btn"
+            (click)="approveOrder(order.id!)"
+            [disabled]="order.approved"
+          >
+            Approve
+          </button>
+
+          <button class="delete-btn" (click)="deleteOrder(order.id!)">
+            Cancel
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #noOrders>
+    <p class="no-orders-text">🛒 No orders found.</p>
+  </ng-template>
+</div>

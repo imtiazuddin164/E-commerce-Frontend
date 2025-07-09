@@ -1,0 +1,229 @@
+<!-- <div class="seller-register-container">
+  <form
+    class="seller-register-form"
+    #sellerForm="ngForm"
+    (ngSubmit)="registerSeller(sellerForm.value)"
+  >
+    <h2>Seller Registration</h2> -->
+
+    <!-- Full Name -->
+    <!-- <label for="fullName">Full Name</label>
+    <input
+      type="text"
+      id="fullName"
+      name="fullName"
+      ngModel
+      required
+      placeholder="Enter your full name"
+    /> -->
+
+    <!-- Email -->
+    <!-- <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      ngModel
+      required
+      placeholder="Enter your email"
+    /> -->
+
+    <!-- Phone -->
+    <!-- <label for="phone">Phone Number</label>
+    <input
+      type="tel"
+      id="phone"
+      name="phone"
+      ngModel
+      required
+      placeholder="Enter phone number"
+      pattern="[0-9]{10,15}"
+    /> -->
+
+    <!-- Username -->
+    <!-- <label for="username">Username</label>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      ngModel
+      required
+      minlength="4"
+      placeholder="Choose a username"
+    /> -->
+
+    <!-- Password -->
+    <!-- <label for="password">Password</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      ngModel
+      required
+      minlength="6"
+      placeholder="Enter password"
+    /> -->
+
+    <!-- Confirm Password -->
+    <!-- <label for="confirmPassword">Confirm Password</label>
+    <input
+      type="password"
+      id="confirmPassword"
+      name="confirmPassword"
+      ngModel
+      required
+      minlength="6"
+      placeholder="Re-enter password"
+    /> -->
+
+    <!-- Shop Name -->
+    <!-- <label for="shopName">Shop Name</label>
+    <input
+      type="text"
+      id="shopName"
+      name="shopName"
+      ngModel
+      required
+      placeholder="Your shop or brand name"
+    /> -->
+
+    <!-- Business Type -->
+    <!-- <label for="businessType">Business Type</label>
+    <select
+      id="businessType"
+      name="businessType"
+      ngModel
+      required
+    >
+      <option value="" disabled selected>Select business type</option>
+      <option value="electronics">Electronics</option>
+      <option value="fashion">Fashion</option>
+      <option value="home">Home & Kitchen</option>
+      <option value="grocery">Grocery</option>
+      <option value="others">Others</option>
+    </select> -->
+
+    <!-- Submit -->
+    <!-- <button type="submit" [disabled]="sellerForm.invalid">Register</button>
+  </form>
+</div> -->
+
+<div class="daraz-seller-container">
+  <form
+    class="daraz-seller-form"
+    #sellerForm="ngForm"
+    (ngSubmit)="registerSeller(sellerForm.value)"
+  >
+    <!-- Header with icon -->
+    <div class="form-header">
+      <i class="fa fa-store seller-icon"></i>
+      <h2>Become a Seller</h2>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          ngModel
+          required
+          placeholder="Enter your full name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          ngModel
+          required
+          placeholder="Enter your email"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          ngModel
+          required
+          placeholder="Enter phone number"
+          pattern="[0-9]{10,15}"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          ngModel
+          required
+          minlength="4"
+          placeholder="Choose a username"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          ngModel
+          required
+          minlength="6"
+          placeholder="Enter password"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          ngModel
+          required
+          minlength="6"
+          placeholder="Re-enter password"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="shopName">Shop Name</label>
+        <input
+          type="text"
+          id="shopName"
+          name="shopName"
+          ngModel
+          required
+          placeholder="Your shop or brand name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="businessType">Business Type</label>
+        <select id="businessType" name="businessType" ngModel required>
+          <option value="" disabled selected>Select business type</option>
+          <option value="electronics">Electronics</option>
+          <option value="fashion">Fashion</option>
+          <option value="home">Home & Kitchen</option>
+          <option value="grocery">Grocery</option>
+          <option value="others">Others</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="submit-btn">
+      <button type="submit" [disabled]="sellerForm.invalid">Register</button>
+    </div>
+  </form>
+</div>

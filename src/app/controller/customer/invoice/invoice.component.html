@@ -1,0 +1,60 @@
+<div class="invoice-container" id="invoice" *ngIf="order">
+  <div class="invoice-header">
+    <h2>🧾 Invoice</h2>
+    <div class="invoice-meta">
+      <p><strong>Order Code:</strong> {{ order.orderCode }}</p>
+      <p><strong>Date:</strong> {{ order.date | date : "medium" }}</p>
+      <p><strong>Name:</strong> {{ order.customerName }}</p>
+      <p><strong>Phone:</strong> {{ order.phone }}</p>
+      <p>
+        <strong>Payment Method:</strong>
+        {{
+          order.paymentMethod === "cod"
+            ? "Cash on Delivery"
+            : order.paymentMethod === "card"
+            ? "Card Payment (Paid)"
+            : order.paymentMethod === "mobile" && order.mobileType
+            ? order.mobileType + " (Paid)"
+            : "Unknown"
+        }}
+      </p>
+      <p><strong>Address:</strong> {{ order.address }}</p>
+    </div>
+  </div>
+
+  <table class="invoice-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Product</th>
+        <th>Qty</th>
+        <th>Unit Price</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of order.items; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>৳{{ item.price }}</td>
+        <td>৳{{ item.quantity * item.price }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="invoice-summary">
+    <p><strong>Subtotal:</strong> ৳{{ order.subtotal }}</p>
+    <!-- <p><strong>VAT (15%):</strong> ৳{{ order.vat }}</p> -->
+    <p><strong>VAT (15%):</strong> ৳{{ order.vat | number : "1.2-2" }}</p>
+    <p><strong>Delivery Fee:</strong> ৳{{ order.deliveryFee }}</p>
+    <p class="grand-total">
+      <strong>Grand Total:</strong> ৳{{ order.total | number : "1.2-2" }}
+    </p>
+  </div>
+
+  <div class="invoice-actions">
+    <button (click)="printInvoice()">🖨️ Print</button>
+    <button (click)="downloadPDF()">📄 Download PDF</button>
+  </div>
+</div>

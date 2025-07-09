@@ -1,0 +1,180 @@
+
+<!-- <div class="register-container">
+  <form
+    class="register-form"
+    #formRegistration="ngForm"
+    (ngSubmit)="registerUser(formRegistration.value)"
+  >
+    <h2>Create Account</h2>
+
+    <label for="name">Full Name</label> -->
+    <!-- <input type="text" [(ngModel)]="name" name="name" placeholder="Enter full name"> -->
+    <!-- <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Enter full name"
+      ngModel
+    />
+
+    <label for="email">Email</label> -->
+    <!-- <input type="text" [(ngModel)]="email" name="email" placeholder="Enter email"> -->
+    <!-- <input
+      type="text"
+      id="email"
+      name="email"
+      placeholder="Enter email"
+      ngModel
+    />
+
+    <label for="phone">Phone</label> -->
+    <!-- <input type="text" [(ngModel)]="email" name="email" placeholder="Enter email"> -->
+    <!-- <input
+      type="text"
+      id="phone"
+      name="phone"
+      placeholder="Enter phone number"
+      ngModel
+    />
+
+    <label for="username">Username</label> -->
+    <!-- <input type="text" [(ngModel)]="userame" name="username" placeholder="Enter username"> -->
+    <!-- <input
+      type="text"
+      id="userName"
+      name="userName"
+      placeholder="Enter username"
+      ngModel
+    />
+
+    <label for="password">Password</label> -->
+    <!-- <input type="password" [(ngModel)]="password" name="password" placeholder="Enter password"> -->
+    <!-- <input
+      type="password"
+      id="password"
+      name="password"
+      placeholder="Enter password"
+      ngModel
+    />
+
+    <label for="confirmpassword">Confirm Password</label>
+    <input
+      type="password"
+      name="confirmPassword"
+      placeholder="Re-enter password"
+      ngModel
+    /> -->
+    <!-- <input type="password" [(ngModel)]="confirmpassword" name="confirmpassword" placeholder="Re-enter password"> -->
+
+    <!-- <input type="submit"> -->
+
+    <!-- <button type="submit">Register</button>
+
+    <p class="login-link">
+      Already have an account? <a href="login">Login here</a>
+    </p>
+  </form>
+    
+</div> -->
+
+
+
+<div class="daraz-user-container">
+  <form
+    class="daraz-user-form"
+    #formRegistration="ngForm"
+    (ngSubmit)="registerUser(formRegistration.value)"
+  >
+    <!-- Top icon and heading -->
+    <div class="form-header">
+      <i class="fa fa-user-plus user-icon"></i>
+      <h2>Create Your Account</h2>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter full name"
+        ngModel
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter email"
+        ngModel
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        placeholder="Enter phone number"
+        ngModel
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="userName">Username</label>
+      <input
+        type="text"
+        id="userName"
+        name="userName"
+        placeholder="Enter username"
+        ngModel
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter password"
+        ngModel
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        type="password"
+        name="confirmPassword"
+        placeholder="Re-enter password"
+        ngModel
+        required
+      />
+    </div>
+
+    <button type="submit" [disabled]="formRegistration.invalid">
+      Register
+    </button>
+
+    <p class="login-link">
+      Already have an account?
+      <a routerLink="/login">Login here</a>
+    </p>
+  </form>
+</div>
+
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>

@@ -1,0 +1,104 @@
+<!-- <div class="product-list-container">
+  <h2>Product Management</h2>
+  <h4>Product List</h4>
+
+  <div class="top-bar">
+    <button routerLink="/add-product">+ Add Product</button>
+  </div>
+
+  <table class="product-table">
+    <thead>
+      <tr>
+        <th>#ID</th>
+        <th>Image</th>
+        <th>Product Code</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Subcategory</th>
+        <th>Stock</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td><img [src]="product.mainImage" alt="Product Image" /></td>
+        <td>{{ product.productCode }}</td>
+        <td>{{ product.productName }}</td>
+        <td>{{ product.description }}</td> -->
+<!-- <td>{{ product.price | currency }}</td> -->
+<!-- <td>
+          {{ product.price | currency : "BDT " : "symbol" }}
+        </td>
+
+        <td>{{ product.categoryName }}</td>
+        <td>{{ product.subcategoryName }}</td>
+        <td>{{ product.stock }}</td>
+        <td>
+          <button class="edit-btn" (click)="editProduct(product.id)">
+            Edit
+          </button>
+          <button class="delete-btn" (click)="deleteProduct(product.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+<!-- product-list.component.html -->
+<div class="product-list-container">
+  <!-- <h2>Product Management</h2> -->
+  <h2>Product List</h2>
+  <!-- 
+  <div class="top-bar">
+    <button routerLink="/admin/add-product">+ Add Product</button>
+  </div> -->
+
+  <!-- 👇 Wrapper added -->
+  <div class="table-wrapper">
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>#ID</th>
+          <th>Image</th>
+          <th>Product Code</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Subcategory</th>
+          <th>Stock</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.id }}</td>
+          <!-- <td><img [src]="product.mainImage" alt="Product Image" /></td> -->
+          <td>
+            <img [src]="'http://localhost:8080/image/' + product.mainImage" />
+          </td>
+          <td>{{ product.productCode }}</td>
+          <td>{{ product.productName }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.price | currency : "BDT " : "symbol" }}</td>
+          <td>{{ product.categoryName }}</td>
+          <td>{{ product.subcategoryName }}</td>
+          <td>{{ product.stock }}</td>
+          <td>
+            <button class="edit-btn" (click)="editProduct(product.id)">
+              Edit
+            </button>
+            <button class="delete-btn" (click)="deleteProduct(product.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

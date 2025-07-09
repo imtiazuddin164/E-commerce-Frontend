@@ -1,0 +1,88 @@
+<!-- <div class="container">
+  <h2>📅 Today's Sales Summary</h2>
+  <p><strong>Total Sales:</strong> {{ todaySales | currency:'BDT' }}</p> -->
+
+  <!-- 🔍 Search Input -->
+  <!-- <div class="search-bar mb-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search by product name or date"
+      [(ngModel)]="search"
+      (input)="filterSales()"
+    />
+  </div> -->
+
+  <!-- 📋 Filtered Table -->
+  <!-- <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>Product</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Total</th>
+        <th>Date</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of filteredList">
+        <td>{{ item.name }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.total }}</td>
+        <td>{{ item.date }}</td>
+        <td>{{ item.time }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+<div class="sales-summary-container">
+  <h2 class="section-title">📅 Today's Sales Summary</h2>
+
+  <!-- 🔹 Row: Total Sales & Search -->
+  <div class="summary-controls">
+    <div class="total-sales">
+      <span>Total Sales:</span>
+      <strong>{{ todaySales | currency:'BDT' }}</strong>
+    </div>
+
+    <div class="search-bar">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by product name or date"
+        [(ngModel)]="search"
+        (input)="filterSales()"
+      />
+    </div>
+  </div>
+
+  <!-- 📋 Table -->
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover mt-3">
+      <thead class="table-dark text-center">
+        <tr>
+          <th>Product</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Total</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr *ngFor="let item of filteredList">
+          <td>{{ item.name }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.total }}</td>
+          <td>{{ item.date }}</td>
+          <td>{{ item.time }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

@@ -1,0 +1,52 @@
+<br />
+<div class="checkout-container">
+  <div class="checkout-form">
+    <h2>🛵 Shipping Information</h2>
+
+    <form #form="ngForm" (ngSubmit)="proceedToPaymentMethod()">
+      <div class="form-group">
+        <label for="name">👤 Full Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="deliveryData.name"
+          required
+          placeholder="Enter your full name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">📞 Phone Number:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          [(ngModel)]="deliveryData.phone"
+          required
+          pattern="^01[0-9]{9}$"
+          placeholder="e.g. 01XXXXXXXXX"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="address">🏠 Delivery Address:</label>
+        <textarea
+          id="address"
+          name="address"
+          [(ngModel)]="deliveryData.address"
+          required
+          placeholder="e.g. House #12, Road #3,West Nakhalpara, Tejgaon, , Dhaka"
+        ></textarea>
+      </div>
+
+      <button type="submit" >
+        Proceed to Payment Method ➡️
+      </button>
+    </form>
+  </div>
+
+  <div class="checkout-summary">
+    <app-order-summary></app-order-summary>
+  </div>
+</div>

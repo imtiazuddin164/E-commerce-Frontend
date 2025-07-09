@@ -1,0 +1,28 @@
+<div class="seller-profile-container">
+  <form #profileForm="ngForm" (ngSubmit)="submitProfile(profileForm.value)">
+    <h2>Complete Your Seller Profile</h2>
+
+    <label for="businessAddress">Business Address</label>
+    <textarea id="businessAddress" name="businessAddress" rows="3" ngModel required></textarea>
+
+    <label for="tinNumber">TIN Number</label>
+    <input type="text" id="tinNumber" name="tinNumber" ngModel required />
+
+    <label for="bankAccountName">Bank Account Holder Name</label>
+    <input type="text" id="bankAccountName" name="bankAccountName" ngModel required />
+
+    <label for="bankAccountNumber">Bank Account Number</label>
+    <input type="text" id="bankAccountNumber" name="bankAccountNumber" ngModel required />
+
+    <label for="bankName">Bank Name & Branch</label>
+    <input type="text" id="bankName" name="bankName" ngModel required />
+
+    <label for="nidNumber">NID Number</label>
+    <input type="text" id="nidNumber" name="nidNumber" ngModel required />
+
+    <label for="tradeLicense">Trade License Number</label>
+    <input type="text" id="tradeLicense" name="tradeLicense" ngModel />
+
+    <button type="submit">Save Profile</button>
+  </form>
+</div>
